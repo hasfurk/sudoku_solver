@@ -16,5 +16,6 @@ int main(int argc, char *argv[]){
     
     Sudoku sudoku(board);
     sudoku.displayBoard();
+    
     return 0;
 }
