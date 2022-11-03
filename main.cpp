@@ -14,16 +14,16 @@ int main(int argc, char *argv[]){
         {0,0,0,0,0,0,0,0,0},
         };
     
-    uint8_t values=0;
     for(uint8_t row=0;row<board.size();row++){
         for (uint8_t column=0;column<board[row].size();column++){
-            board[row][column] = values;
-            values++;
+            board[row][column] = rand()%9+1;
         }
     }
     
     Sudoku sudoku(board);
-    // sudoku.displayBoard();
-    cout << sudoku.squareContains(5, 32) << endl; 
+    sudoku.displayBoard();
+
+    uint8_t square = sudoku.findSquare(6,5);
+    printf("%d\n", square);
     return 0;
 }

@@ -22,13 +22,17 @@ class Sudoku{
     public:
         Sudoku(vector<vector<uint8_t>> board);
 
-        bool rowContains(uint8_t row, uint8_t value);
-        bool columnContains(uint8_t column, uint8_t value);
-        bool squareContains(uint8_t square, uint8_t value);
+        bool rowNotContains(uint8_t row, uint8_t value);
+        bool columnNotContains(uint8_t column, uint8_t value);
+        bool squareNotContains(uint8_t square, uint8_t value);
+
+        uint8_t findSquare(uint8_t row, uint8_t column);
         bool isEmpty(uint8_t row, uint8_t column);
 
-        uint8_t* searchRows(uint8_t value);
-        uint8_t* searchColumns(uint8_t value);
+        vector<uint8_t> searchRows(uint8_t value);
+        vector<uint8_t> searchColumns(uint8_t value);
+
+        vector<uint8_t> possibleLocations(vector<uint8_t> rows, vector<uint8_t> columns);
 
         void displayBoard();
 
